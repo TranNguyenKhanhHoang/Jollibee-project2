@@ -1,18 +1,25 @@
 <?php
-
+/*
+ * about.php - About page.
+ * The team contributions (Part 1 + Part 2) are loaded from the `about` table.
+ * settings.php holds the database details and opens the connection ($conn).
+ */
 require_once 'settings.php';
 
-// 1. connect to the database
-$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+// if something is wrong with the query, show a message instead of a PHP error
+mysqli_report(MYSQLI_REPORT_OFF);
 
-// 2. get all members from the about table
-$result = false;
-if ($conn) {
-    mysqli_set_charset($conn, 'utf8mb4');
-    $result = mysqli_query($conn, 'SELECT * FROM about ORDER BY member_no');
+// get all members from the about table
+mysqli_set_charset($conn, 'utf8mb4');
+$result = mysqli_query($conn, 'SELECT * FROM about ORDER BY member_no');
+
+// protects the page from HTML/JS stored in the data
+function e($text)
+{
+    return htmlspecialchars((string) $text);
 }
 
-// small helper: the database stores one bullet per line, this prints them as <li>
+// the database stores one bullet per line, this prints them as <li>
 function show_list($text)
 {
     echo '<ul>';
@@ -24,10 +31,12 @@ function show_list($text)
     echo '</ul>';
 }
 
-$page_title = 'About Us';
-$page_css   = ['styles/aboutstyles.css'];
+$pageTitle = 'NovaCart | About Us';
 include 'header.inc';
+include 'nav.inc';
 ?>
+    <link rel="stylesheet" href="styles/aboutstyles.css">
+
     <main>
         <section>
             <h1>About NovaCart</h1>
@@ -90,7 +99,7 @@ include 'header.inc';
                 <h2>Team Contribution</h2>
 
                 <?php if (!$result): ?>
-                    <p>Team contributions are not available. Please import about.sql into the database.</p>
+                    <p>Team contributions are not available. Please import database/jollibee_careers.sql into the database.</p>
                 <?php else: ?>
                     <?php while ($m = mysqli_fetch_assoc($result)): ?>
                         <div class="member-card">
