@@ -1,3 +1,4 @@
+<?php include 'header.inc';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,3 +172,4 @@
 </body>
 
 </html>
+<?php include 'footer.inc';?>
