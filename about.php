@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 /*
  * about.php - About page.
  * The team contributions (Part 1 + Part 2) are loaded from the `about` table.
