@@ -1,4 +1,7 @@
-<?php include 'includes/header.inc'; ?>
+<?php
+$pageTitle = "NovaCart | Jobs"; 
+include "includes/header.inc";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
