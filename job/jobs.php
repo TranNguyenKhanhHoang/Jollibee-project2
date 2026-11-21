@@ -53,7 +53,7 @@
 
         <div class="card-job">
             <?php
-                require_once "setting.php";
+                require_once "settings.php";
                 mysqli_report(MYSQLI_REPORT_OFF);
                 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
