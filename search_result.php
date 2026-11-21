@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD:job/search_result.php
 require_once "settings.php";
+=======
+require_once "includes/setting.php";
+>>>>>>> 160184cd389b61f37a19751d778af8bc8a8524a4:search_result.php
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
 if (!$conn) {

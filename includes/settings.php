@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pwd = "";
-$sql_db = "novacart";
+$sql_db = "jollibee_careers";
 
 $conn = mysqli_connect($host, $user, $pwd, $sql_db);
 

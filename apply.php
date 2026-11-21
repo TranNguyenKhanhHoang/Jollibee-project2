@@ -1,3 +1,7 @@
+<?php
+$pageTitle = "NovaCart | Apply"; 
+include "includes/header.inc";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,3 +175,4 @@
 </body>
 
 </html>
+<?php include 'includes/footer.inc';?>
