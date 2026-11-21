@@ -1,5 +1,5 @@
 <?php
-require_once "setting.php";
+require_once "includes/setting.php";
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
 if (!$conn) {

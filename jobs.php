@@ -1,3 +1,4 @@
+<?php include 'includes/header.inc'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,16 +19,16 @@
     <!-- ================= HEADER ================= -->
     <header class="header">
         <div class="container">
-            <a href="Home page.html" class="logo">
+            <a href="index.php" class="logo">
                 NovaCart
             </a>
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="Home page.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="jobs.php" class="active">Jobs</a></li>
-                    <li><a href="apply.html">Apply</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="apply.php">Apply</a></li>
+                    <li><a href="about.php">About</a></li>
                 </ul>
 
                
@@ -53,7 +54,7 @@
 
         <div class="card-job">
             <?php
-                require_once "setting.php";
+                require_once "includes/settings.php";
                 mysqli_report(MYSQLI_REPORT_OFF);
                 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
@@ -80,7 +81,7 @@
                             echo '<li>' . htmlspecialchars($row['skill_1']) . '</li>';
                             echo '<li>' . htmlspecialchars($row['skill_2']) . '</li>';
                             echo '</ul>';
-                            echo '<a href="apply.html">Apply now →</a>';
+                            echo '<a href="apply.php">Apply now →</a>';
                             echo '</article>';
                         }
                     } else {
@@ -186,7 +187,7 @@
                          <li>Teamwork Framework</li>
                     </ul>
 
-                    <a href="apply.html">
+                    <a href="apply.php">
                         Apply now →
                     </a>
 
@@ -209,7 +210,7 @@
                         <li>Professional Communication and Presentation</li>
                         <li>Teamwork Framework</li>
                     </ul>
-                    <a href="apply.html">
+                    <a href="apply.php">
                         Apply now →
                     </a>
 
@@ -230,7 +231,7 @@
                          <li>Teamwork Framework</li>
                     </ul>
 
-                    <a href="apply.html">
+                    <a href="apply.php">
                         Apply now →
                     </a>
 
@@ -275,3 +276,4 @@
 </body>
 
 </html>
+<?php include 'includes/footer.inc'; ?>

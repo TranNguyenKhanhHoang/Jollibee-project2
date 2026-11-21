@@ -6,7 +6,7 @@ error_reporting(E_ALL);
  * The team contributions (Part 1 + Part 2) are loaded from the `about` table.
  * settings.php holds the database details and opens the connection ($conn).
  */
-require_once 'settings.php';
+require_once 'includes/settings.php';
 
 // if something is wrong with the query, show a message instead of a PHP error
 mysqli_report(MYSQLI_REPORT_OFF);
@@ -34,8 +34,8 @@ function show_list($text)
 }
 
 $pageTitle = 'NovaCart | About Us';
-include 'header.inc';
-include 'nav.inc';
+include 'includes/header.inc';
+include 'includes/nav.inc';
 ?>
     <link rel="stylesheet" href="styles/aboutstyles.css">
 
@@ -168,4 +168,4 @@ include 'nav.inc';
         <p><a href="jobs.php">Explore Job Opportunities</a></p>
         <p><a href="apply.php">Apply Now</a></p>
     </main>
-<?php include 'footer.inc'; ?>
+<?php include 'includes/footer.inc'; ?>

@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "NovaCart | Home";
-include("includes/header.php");
+include "includes/header.inc" ;
 ?>
 
 <main>
@@ -202,4 +202,4 @@ include("includes/header.php");
 
 </main>
 
-<?php include("includes/footer.php"); ?>
+<?php include "includes/footer.inc"; ?>

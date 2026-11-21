@@ -1,3 +1,4 @@
+<?php include 'includes/header.inc'; ?>
 <?php
 // Accept POST requests only; redirect direct access to the application form.
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -315,3 +316,4 @@ if (!$errors) {
 <footer>&copy; 2026 NovaCart. All rights reserved.</footer>
 </body>
 </html>
+<?php include 'includes/footer.inc'; ?>

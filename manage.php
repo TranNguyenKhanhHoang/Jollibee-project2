@@ -1,6 +1,6 @@
 <?php
 include("includes/auth.inc");
-require_once("settings.php");
+require_once("includes/settings.php");
 
 $pageTitle = "Manage EOIs";
 include("includes/header.inc");
