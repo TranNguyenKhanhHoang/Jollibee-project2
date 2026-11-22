@@ -1,24 +1,14 @@
+
+
 <?php
-$pageTitle = "NovaCart | Jobs"; 
+$pageTitle = "NovaCart | jobs";
+$pageStylesheet = "styles/applystyle.css"; 
+$pageStylesheet = "styles/jobstyles.css"; 
 include "includes/header.inc";
+include 'includes/nav.inc';
 ?>
 
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="NovaCart Recruitment Website">
-    <meta name="keywords" content="NovaCart, Recruitment, E-Commerce">
-    <meta name="author" content="Your Team">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>NovaCart | Jobs</title>
-
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/jobstyles.css">
 
     <!--  EMBEDDED CSS -->
     <style>
@@ -60,23 +50,8 @@ include "includes/header.inc";
 <body>
     <!-- ================= HEADER ================= -->
 
-    <header class="header">
-
-        <div class="container">
-
-          
-           <a href="Home page.html" class="logo-container" style="display: flex; align-items: center; gap: 5px; text-decoration: none;">
-            
-        <img src="images/logo.png" alt="NovaCart Logo" class="logo-img" style="height: 40px; width: auto;">
-        <span class="logo">NovaCart</span>
-    </a>
             <nav class="navbar">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="jobs.php" class="active">Jobs</a></li>
-                    <li><a href="apply.php">Apply</a></li>
-                    <li><a href="about.php">About</a></li>
-                </ul>
+                
 
                 <!-- Search Bar Form -->
                 <div class="search-container">
@@ -192,7 +167,7 @@ include "includes/header.inc";
 
                         mysqli_close($conn);
                     } else {
-                        echo '<p>Unable to connect to the database.</p>';
+                        echo '<p>Unable to connect </p>';
                     }
                 ?>
 
