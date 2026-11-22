@@ -1,4 +1,3 @@
-<?php include 'includes/header.inc'; ?>
 <?php
 // Accept POST requests only; redirect direct access to the application form.
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -57,25 +56,47 @@ if (strlen($otherskills) > 5000) $errors[] = "Other skills must be at most 5000 
 
 $eoiNumber = null;
 if (!$errors) {
-    // Update these settings to match the database account used by your project.
-    $dbHost = "localhost";
-    $dbName = "jollibee_careers";
-    $dbUser = "root";
-    $dbPassword = "";
-    try {
-        $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8mb4", $dbUser, $dbPassword, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-        $sql = "INSERT INTO eoi (jobref, position, firstname, lastname, dob, gender, street, suburb, state, postcode, email, phone, skills, otherskills)
-                VALUES (:jobref, :position, :firstname, :lastname, :dob, :gender, :street, :suburb, :state, :postcode, :email, :phone, :skills, :otherskills)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            ':jobref' => $jobref, ':position' => $position, ':firstname' => $firstname, ':lastname' => $lastname,
-            ':dob' => $dob, ':gender' => $gender, ':street' => $street, ':suburb' => $suburb, ':state' => $state,
-            ':postcode' => $postcode, ':email' => $email, ':phone' => $phone,
-            ':skills' => json_encode($skills, JSON_UNESCAPED_UNICODE), ':otherskills' => $otherskills
-        ]);
-        $eoiNumber = (int)$pdo->lastInsertId();
-    } catch (PDOException $exception) {
-        error_log("EOI insert failed: " . $exception->getMessage());
+    require_once __DIR__ . "/includes/settings.php";
+
+    $sql = "INSERT INTO eoi
+        (jobref, position, firstname, lastname, dob, gender, street, suburb,
+         state, postcode, email, phone, skills, otherskills)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = mysqli_prepare($conn, $sql);
+
+    if ($stmt) {
+        $skillsJson = json_encode($skills, JSON_UNESCAPED_UNICODE);
+
+        mysqli_stmt_bind_param(
+            $stmt,
+            "ssssssssssssss",
+            $jobref,
+            $position,
+            $firstname,
+            $lastname,
+            $dob,
+            $gender,
+            $street,
+            $suburb,
+            $state,
+            $postcode,
+            $email,
+            $phone,
+            $skillsJson,
+            $otherskills
+        );
+
+        if (mysqli_stmt_execute($stmt)) {
+            $eoiNumber = mysqli_insert_id($conn);
+        } else {
+            error_log("EOI insert failed: " . mysqli_stmt_error($stmt));
+            $errors[] = "We could not save your application right now. Please try again later.";
+        }
+
+        mysqli_stmt_close($stmt);
+    } else {
+        error_log("EOI statement preparation failed: " . mysqli_error($conn));
         $errors[] = "We could not save your application right now. Please try again later.";
     }
 }
@@ -312,8 +333,6 @@ if (!$errors) {
     </div>
 <?php endif; ?>
 </main>
-
-<footer>&copy; 2026 NovaCart. All rights reserved.</footer>
 </body>
 </html>
 <?php include 'includes/footer.inc'; ?>
