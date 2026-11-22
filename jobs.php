@@ -2,6 +2,9 @@
 $pageTitle = "NovaCart | Jobs"; 
 include "includes/header.inc";
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,16 +19,57 @@ include "includes/header.inc";
 
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/jobstyles.css">
+
+    <!--  EMBEDDED CSS -->
+    <style>
+        
+        /* ================= PAGE HERO BANNER ================= */
+.page-banner {
+    background: linear-gradient(120deg, #004d35, #006241 65%, #168264);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+}
+
+.page-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-banner h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.page-banner p {
+    font-size: 1.1rem;
+    color: #d4e9e2;
+    margin: 0;
+    font-weight: 400;
+}
+    </style>
+
 </head>
 
 <body>
     <!-- ================= HEADER ================= -->
-    <header class="header">
-        <div class="container">
-            <a href="index.php" class="logo">
-                NovaCart
-            </a>
 
+    <header class="header">
+
+        <div class="container">
+
+          
+           <a href="Home page.html" class="logo-container" style="display: flex; align-items: center; gap: 5px; text-decoration: none;">
+            
+        <img src="images/logo.png" alt="NovaCart Logo" class="logo-img" style="height: 40px; width: auto;">
+        <span class="logo">NovaCart</span>
+    </a>
             <nav class="navbar">
                 <ul>
                     <li><a href="index.php">Home</a></li>
@@ -34,72 +78,16 @@ include "includes/header.inc";
                     <li><a href="about.php">About</a></li>
                 </ul>
 
-               
-
-
                 <!-- Search Bar Form -->
                 <div class="search-container">
-                    <form method="get" action="jobs.php">
-                        <label for="job_title"><strong>Search Job :</strong></label>
+                    <form method="get" action="search_result.php">
+                        <label for="job_title">Search Job :</label>
                         <input type="text" id="job_title" name="job_title" value="<?php echo isset($_GET['job_title']) ? htmlspecialchars($_GET['job_title']) : ''; ?>" required />
-
-                        
                         <input type="submit" value="Search" style="display: none;" />
-
-                        
+                    </form>
                 </div>
-
-                
-
             </nav>
-
-            <!-- JOB LISTS  -->
-
-        <div class="card-job">
-            <?php
-                require_once "settings.php";
-                mysqli_report(MYSQLI_REPORT_OFF);
-                $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
-
-                if ($conn) {
-                    // Xử lý logic tìm kiếm theo tên công việc (title)
-                    if (isset($_GET['job_title']) && !empty(trim($_GET['job_title']))) {
-                        $search_title = mysqli_real_escape_string($conn, trim($_GET['job_title']));
-                        $query = "SELECT * FROM jobs WHERE title LIKE '%$search_title%'";
-                    } else {
-                        $query = "SELECT * FROM jobs";
-                    }
-
-                    $result = mysqli_query($conn, $query);
-
-                    if ($result && mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<article class="card">';
-                            echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
-                            echo '<ul>';
-                            echo '<li>Reference Number: ' . htmlspecialchars($row['reference_number']) . '</li>';
-                            echo '<li>Short Description: ' . htmlspecialchars($row['description']) . '</li>';
-                            echo '<li>Salary: ' . htmlspecialchars($row['salary']) . '</li>';
-                            echo '<li>Reporting Line: ' . htmlspecialchars($row['reporting_line']) . '</li>';
-                            echo '<li>' . htmlspecialchars($row['skill_1']) . '</li>';
-                            echo '<li>' . htmlspecialchars($row['skill_2']) . '</li>';
-                            echo '</ul>';
-                            echo '<a href="apply.php">Apply now →</a>';
-                            echo '</article>';
-                        }
-                    } else {
-                        echo '<p>No matching jobs found.</p>';
-                    }
-
-                    mysqli_close($conn);
-                } else {
-                    echo '<p>Unable to connect to the database.</p>';
-                }
-            ?>
-                
         </div>
-
-
     </header>
 
     <!-- ================= PAGE HERO BANNER ================= -->
@@ -163,20 +151,54 @@ include "includes/header.inc";
         </aside>
 
         <!-- job lists -->
-
         <section class="open-positions">
-
-
             <h2>Open Positions</h2>
 
             <div class="card-job">
+                <?php
+                    require_once "includes/settings.php";
+                    mysqli_report(MYSQLI_REPORT_OFF);
+                    $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+
+                    if ($conn) {
+                        // Xử lý logic tìm kiếm theo tên công việc (title)
+                        if (isset($_GET['job_title']) && !empty(trim($_GET['job_title']))) {
+                            $search_title = mysqli_real_escape_string($conn, trim($_GET['job_title']));
+                            $query = "SELECT * FROM jobs WHERE title LIKE '%$search_title%'";
+                        } else {
+                            $query = "SELECT * FROM jobs";
+                        }
+
+                        $result = mysqli_query($conn, $query);
+
+                        if ($result && mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo '<article class="card">';
+                                echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
+                                echo '<ul>';
+                                echo '<li>Reference Number: ' . htmlspecialchars($row['reference_number']) . '</li>';
+                                echo '<li>Short Description: ' . htmlspecialchars($row['description']) . '</li>';
+                                echo '<li>Salary: ' . htmlspecialchars($row['salary']) . '</li>';
+                                echo '<li>Reporting Line: ' . htmlspecialchars($row['reporting_line']) . '</li>';
+                                echo '<li>' . htmlspecialchars($row['skill_1']) . '</li>';
+                                echo '<li>' . htmlspecialchars($row['skill_2']) . '</li>';
+                                echo '</ul>';
+                                echo '<a href="apply.php">Apply now →</a>';
+                                echo '</article>';
+                            }
+                        } else {
+                            echo '<p>No matching jobs found.</p>';
+                        }
+
+                        mysqli_close($conn);
+                    } else {
+                        echo '<p>Unable to connect to the database.</p>';
+                    }
+                ?>
 
                 <article class="card">
-
                     <!-- JOB 1 -->
-
                     <h3>Front-End Web Developer</h3>
-
                     <ul>
                         <li>Reference Number: FE102</li>
                         <li>Short Description:
@@ -185,23 +207,17 @@ include "includes/header.inc";
                             accessible customer-facing web interfaces for our online retail platform.</li>
                         <li>Salary: $1,200 – $1,800 / month</li>
                         <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
-
                         <li>Professional Communication and Presentation </li>
-                         <li>Teamwork Framework</li>
+                        <li>Teamwork Framework</li>
                     </ul>
-
                     <a href="apply.php">
                         Apply now →
                     </a>
-
                 </article>
 
                 <!-- JOB 2 -->
-
                 <article class="card">
-
                     <h3>UX/UI Designer</h3>
-
                     <ul>
                         <li>Reference Number: FE102</li>
                         <li>Short Description:
@@ -216,11 +232,9 @@ include "includes/header.inc";
                     <a href="apply.php">
                         Apply now →
                     </a>
-
                 </article>
 
                 <!-- JOB 3-->
-
                 <article class="card">
                     <h3>Product Listing Specialist</h3>
                     <ul>
@@ -230,20 +244,16 @@ include "includes/header.inc";
                             responsive,
                             accessible customer-facing web interfaces for our online retail platform.</li>
                         <li>Salary: $1,200 – $1,800 / month</li>
-                        <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li> <li>Professional Communication and Presentation</li>
-                         <li>Teamwork Framework</li>
+                        <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
+                        <li>Professional Communication and Presentation</li>
+                        <li>Teamwork Framework</li>
                     </ul>
-
                     <a href="apply.php">
                         Apply now →
                     </a>
-
                 </article>
-
             </div>
         </section>
-
-
 
         <!-- Recruitment Process -->
         <section class="rp">
@@ -255,8 +265,6 @@ include "includes/header.inc";
                 <li>Final Offer & Onboarding</li>
             </ol>
         </section>
-
- 
     </main>
 
     <!-- ================= FOOTER ================= -->
@@ -270,9 +278,9 @@ include "includes/header.inc";
                 </a>
             </p>
             <p>
-                <a href="#">GitHub Repository</a>
-                |
-                <a href="#">Live Website</a>
+                <a href="https://github.com/TranNguyenKhanhHoang/Jollibee-project2.git">GitHub Repository</a>
+                
+              
             </p>
         </div>
     </footer>
