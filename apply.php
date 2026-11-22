@@ -1,21 +1,11 @@
 <?php
-$pageTitle = "NovaCart | Apply"; 
+$pageTitle = "NovaCart | Apply";
+$pageStylesheet = "styles/applystyle.css"; 
 include "includes/header.inc";
+include 'includes/nav.inc';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apply for a position at NovaCart">
-  <title>Apply | NovaCart Careers</title>
-  <link rel="stylesheet" href="Styles/styles.css">
-  <link rel="stylesheet" href="Styles/applystyle.css">
-</head>
-
 <body>
-  <header>
+  <header class="apply-hero">
     <h1>NovaCart Careers</h1>
     <p>Join the team building the future of online shopping</p>
   </header>
@@ -169,9 +159,6 @@ include "includes/header.inc";
       </div>
     </form>
   </main>
-
-  <footer>&copy; 2026 NovaCart. All rights reserved.</footer>
-
 </body>
 
 </html>

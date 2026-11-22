@@ -28,6 +28,10 @@ include "includes/header.inc" ;
                     Apply Now
                 </a>
 
+                <a href="about.php" class="btn">
+                    About Us
+                </a>
+
             </div>
 
         </div>
