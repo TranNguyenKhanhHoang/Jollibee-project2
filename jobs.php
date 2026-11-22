@@ -57,11 +57,7 @@ include "includes/header.inc";
 
         <div class="card-job">
             <?php
-<<<<<<< HEAD:job/jobs.php
                 require_once "settings.php";
-=======
-                require_once "includes/settings.php";
->>>>>>> 160184cd389b61f37a19751d778af8bc8a8524a4:jobs.php
                 mysqli_report(MYSQLI_REPORT_OFF);
                 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
@@ -283,7 +279,3 @@ include "includes/header.inc";
 </body>
 
 </html>
-<<<<<<< HEAD:job/jobs.php
-=======
-<?php include 'includes/footer.inc'; ?>
->>>>>>> 160184cd389b61f37a19751d778af8bc8a8524a4:jobs.php
