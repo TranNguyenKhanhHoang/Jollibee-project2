@@ -24,23 +24,23 @@ if (isset($_GET['job_title'])) {
               </tr>";
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            echo "<td>" . $row['job_id'] . "</td>";
-            echo "<td>" . $row['title'] . "</td>";
-            echo "<td>" . $row['reference_number'] . "</td>";
-            echo "<td>" . $row['description'] . "</td>";
-            echo "<td>" . $row['salary'] . "</td>";
-            echo "<td>" . $row['reporting_line'] . "</td>";
+            echo "<td>" . htmlspecialchars($row['job_id']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['title']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['reference_number']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['description']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['salary']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['reporting_line']) . "</td>";
             echo "</tr>";
         }
         echo "</table>";
-        echo "<br><a href='jobs.html'>← Back to Jobs</a>";
+        echo "<br><a href='jobs.php'>← Back to Jobs</a>";
     } else {
         echo "<p>No matching jobs found.</p>";
-        echo "<br><a href='jobs.html'>← Back to Jobs</a>";
+        echo "<br><a href='jobs.php'>← Back to Jobs</a>";
     }
 } else {
     echo "Please enter a job title to search.";
-    echo "<br><a href='jobs.html'>← Back to Jobs</a>";
+    echo "<br><a href='jobs.php'>← Back to Jobs</a>";
 }
 
 mysqli_close($conn);
