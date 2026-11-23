@@ -2,7 +2,6 @@
 
 <?php
 $pageTitle = "NovaCart | jobs";
-$pageStylesheet = "styles/applystyle.css"; 
 $pageStylesheet = "styles/jobstyles.css"; 
 include "includes/header.inc";
 include 'includes/nav.inc';
