@@ -11,6 +11,12 @@
             </a>
         </p>
 
+        <p>
+                <a href="https://github.com/TranNguyenKhanhHoang/Jollibee-project2.git">
+                    GitHub Repository
+                </a>
+            </p>
+
     </div>
 
 </footer>

@@ -1,6 +1,8 @@
 <?php
 $pageTitle = "NovaCart | Home";
 include "includes/header.inc" ;
+include 'includes/nav.inc';
+
 ?>
 
 <main>

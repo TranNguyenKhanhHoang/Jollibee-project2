@@ -5,6 +5,7 @@ $pageTitle = "NovaCart | jobs";
 $pageStylesheet = "styles/applystyle.css"; 
 $pageStylesheet = "styles/jobstyles.css"; 
 include "includes/header.inc";
+
 include 'includes/nav.inc';
 ?>
 
@@ -180,7 +181,7 @@ include 'includes/nav.inc';
                             We are seeking a talented Front-End Web Developer to build, optimize, and maintain
                             responsive,
                             accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 – $1,800 / month</li>
+                        <li>Salary: $1,200 - $1,800 / month</li>
                         <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
                         <li>Professional Communication and Presentation </li>
                         <li>Teamwork Framework</li>
@@ -199,7 +200,7 @@ include 'includes/nav.inc';
                             We are seeking a talented Front-End Web Developer to build, optimize, and maintain
                             responsive,
                             accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 – $1,800 / month</li>
+                        <li>Salary: $1,200 - $1,800 / month</li>
                         <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
                         <li>Professional Communication and Presentation</li>
                         <li>Teamwork Framework</li>
@@ -218,7 +219,7 @@ include 'includes/nav.inc';
                             We are seeking a talented Front-End Web Developer to build, optimize, and maintain
                             responsive,
                             accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 – $1,800 / month</li>
+                        <li>Salary: $1,200 - $1,800 / month</li>
                         <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
                         <li>Professional Communication and Presentation</li>
                         <li>Teamwork Framework</li>
@@ -242,23 +243,8 @@ include 'includes/nav.inc';
         </section>
     </main>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 NovaCart Pty Ltd.</p>
-            <p>
-                Email:
-                <a href="mailto:careers@novacart.com">
-                    careers@novacart.com
-                </a>
-            </p>
-            <p>
-                <a href="https://github.com/TranNguyenKhanhHoang/Jollibee-project2.git">GitHub Repository</a>
-                
-              
-            </p>
-        </div>
-    </footer>
+   
 </body>
 
 </html>
+<?php include 'includes/footer.inc';?>
