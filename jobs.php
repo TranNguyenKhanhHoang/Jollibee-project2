@@ -5,7 +5,6 @@ $pageTitle = "NovaCart | jobs";
 $pageStylesheet = "styles/jobstyles.css"; 
 include "includes/header.inc";
 
-include 'includes/nav.inc';
 ?>
 
 
@@ -31,7 +30,7 @@ include 'includes/nav.inc';
 }
 
 .page-banner h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 12px;
     color: #ffffff;
@@ -48,28 +47,23 @@ include 'includes/nav.inc';
 </head>
 
 <body>
-    <!-- ================= HEADER ================= -->
-
-            <nav class="navbar">
-                
-
-                <!-- Search Bar Form -->
-                <div class="search-container">
-                    <form method="get" action="search_result.php">
-                        <label for="job_title">Search Job :</label>
-                        <input type="text" id="job_title" name="job_title" value="<?php echo isset($_GET['job_title']) ? htmlspecialchars($_GET['job_title']) : ''; ?>" required />
-                        <input type="submit" value="Search" style="display: none;" />
-                    </form>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <?php include 'includes/nav.inc'; ?>
 
     <!-- ================= PAGE HERO BANNER ================= -->
     <section class="page-banner">
         <div class="container">
             <h1>NovaCart Jobs</h1>
             <p>Join the team building the future of online shopping</p>
+
+            <div class="job-search">
+                <form class="search-container" method="get" action="search_result.php" role="search" aria-label="Search open positions">
+                    <img src="images/search_icon.png" alt="" aria-hidden="true">
+                    <label class="visually-hidden" for="job_title">Search jobs</label>
+                    <input type="search" id="job_title" name="job_title" placeholder="Search jobs"
+                        value="<?php echo isset($_GET['job_title']) ? htmlspecialchars($_GET['job_title']) : ''; ?>" required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -136,7 +130,7 @@ include 'includes/nav.inc';
                     $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
                     if ($conn) {
-                        // Xử lý logic tìm kiếm theo tên công việc (title)
+                      
                         if (isset($_GET['job_title']) && !empty(trim($_GET['job_title']))) {
                             $search_title = mysqli_real_escape_string($conn, trim($_GET['job_title']));
                             $query = "SELECT * FROM jobs WHERE title LIKE '%$search_title%'";

@@ -20,7 +20,7 @@
     padding: 20px 22px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+   
 }
 
 .career-tips:hover,
@@ -157,42 +157,32 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
- /* <!-- RECRUITMENT PROCESS--> */
-
- .rp{
-    
+/* ================= RECRUITMENT PROCESS ================= */
+.rp {
     float: left;
     width: 70%;
     box-sizing: border-box;
-    padding-right: 30px; 
-   
+    padding-right: 30px;
 }
-
 
 .rp ol {
     display: flex;
     justify-content: center;
     gap: 40px;
-    counter-reset: step-counter;
     flex-wrap: wrap;
-    list-style: none;
+    list-style: decimal;
+    padding-left: 0;
 }
 
 .rp li {
-    counter-increment: step-counter;
+    list-style-position: inside;
     background: #d4e9e2;
-    padding: 15px 15px;
+    padding: 15px;
     border-radius: 30px;
     font-weight: 600;
-    min-width: 250px;      
+    min-width: 250px;
     text-align: center;
-} 
-
-.rp li::before {
-  content: counter(step-counter) ". "; 
-  font-weight: bold;
-  margin-right: 6px;
-} 
+}
 
 /* ---------- FOOTER ---------- */
 main::after {
@@ -358,3 +348,104 @@ main::after {
 
 
 
+
+
+/* ================= JOB SEARCH ================= */
+.page-banner .job-search {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(90%, 600px);
+    min-height: 50px;
+    padding: 6px 7px 6px 16px;
+    background: #ffffff;
+    border: 1px solid #c8d8d1;
+    border-radius: 100px;
+
+}
+
+.search-container img {
+    display: block;
+    width: 30px;
+    height: 30px;
+   
+}
+
+.search-container input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    height: 42px;
+    padding: 0 4px;
+    color: #1e3932;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    font-size: 1rem;
+}
+
+.search-container input[type="search"]::placeholder {
+    color: #71817b;
+}
+
+/* search button */
+
+.search-container button {
+    height: 42px;
+    padding: 0 22px;
+    color: #ffffff;
+    background: #006241;
+    border: 0;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+   
+}
+
+.search-container button:hover {
+    background: #004d35;
+}
+
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 480px) {
+    .page-banner .job-search {
+        padding-top: 20px;
+    }
+
+    .search-container {
+        gap: 8px;
+        padding: 6px 7px 6px 12px;
+    }
+
+    .search-container img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .search-container input[type="search"] {
+        font-size: 0.92rem;
+    }
+
+    .search-container button {
+        height: 40px;
+        padding: 0 15px;
+    }
+}
