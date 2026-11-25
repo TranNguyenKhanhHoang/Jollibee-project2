@@ -349,6 +349,9 @@ main::after {
     }
 
 }
+.header .logo {
+    font-size: 1.5rem;
+}
 
 
 
