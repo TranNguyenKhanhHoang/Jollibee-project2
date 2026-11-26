@@ -34,8 +34,8 @@ function show_list($text)
 }
 
 $pageTitle = 'NovaCart | About Us';
-include 'header.inc';
-include 'nav.inc';
+include 'include/header.inc';
+include 'include/nav.inc';
 ?>
     <link rel="stylesheet" href="styles/aboutstyles.css">
 
@@ -168,4 +168,4 @@ include 'nav.inc';
         <p><a href="jobs.php">Explore Job Opportunities</a></p>
         <p><a href="apply.php">Apply Now</a></p>
     </main>
-<?php include 'footer.inc'; ?>
+<?php include 'include/footer.inc'; ?>

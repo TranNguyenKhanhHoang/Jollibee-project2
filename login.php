@@ -25,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php
 $pageTitle = "Admin Login";
-include("header.inc");
-include("nav.inc");
+include("include/header.inc");
+include("include/nav.inc");
 ?>
 
 <h2>Administrator Login</h2>
@@ -50,5 +50,5 @@ include("nav.inc");
 </p>
 
 <?php
-include("footer.inc");
+include("include/footer.inc");
 ?>

@@ -1,8 +1,8 @@
 <?php
 $pageTitle = "NovaCart | Apply";
 $pageStylesheet = "styles/applystyle.css"; 
-include "header.inc";
-include 'nav.inc';
+include "include/header.inc";
+include 'include/nav.inc';
 ?>
 <body>
   <header class="apply-hero">
@@ -159,6 +159,6 @@ include 'nav.inc';
       </div>
     </form>
   </main>
-<?php include 'footer.inc';?>
+<?php include 'include/footer.inc';?>
 </body>
 </html>

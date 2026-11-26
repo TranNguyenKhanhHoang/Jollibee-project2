@@ -3,7 +3,7 @@
 <?php
 $pageTitle = "NovaCart | jobs";
 $pageStylesheet = "styles/jobstyles.css"; 
-include "header.inc";
+include "include/header.inc";
 
 ?>
 
@@ -47,7 +47,7 @@ include "header.inc";
 </head>
 
 <body>
-    <?php include 'nav.inc'; ?>
+    <?php include 'include/nav.inc'; ?>
 
     <!-- ================= PAGE HERO BANNER ================= -->
     <section class="page-banner">
@@ -271,4 +271,4 @@ include "header.inc";
 </body>
 
 </html>
-<?php include 'footer.inc';?>
+<?php include 'include/footer.inc';?>

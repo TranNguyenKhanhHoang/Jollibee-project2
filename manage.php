@@ -1,10 +1,10 @@
 <?php
-include("auth.inc");
+include("include/auth.inc");
 require_once("settings.php");
 
 $pageTitle = "Manage EOIs";
-include("header.inc");
-include("nav.inc");
+include("include/header.inc");
+include("include/nav.inc");
 
 function eoi_h($value): string
 {
@@ -224,7 +224,7 @@ if ($stmt) mysqli_stmt_close($stmt);
 ?>
 <p><a href="logout.php">Logout</a></p>
 <?php
-include("footer.inc");
+include("include/footer.inc");
 ?>
 
 
