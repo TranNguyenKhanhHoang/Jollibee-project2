@@ -167,6 +167,8 @@ include "includes/header.inc";
 
                 <article class="card">
                     <!-- JOB 1 -->
+                    <h3>Front-End Web Developer</h3>
+
                     <ul>
                         <li><strong>Reference Number:</strong> FE102</li>
                         <li><strong>Short Description:</strong> We are seeking a talented Front-End Web Developer to
