@@ -2,7 +2,7 @@
 
 <?php
 $pageTitle = "NovaCart | jobs";
-$pageStylesheet = "jobstyles.css"; 
+$pageStylesheet = "styles/jobstyles.css"; 
 include "header.inc";
 
 ?>
@@ -57,7 +57,7 @@ include "header.inc";
 
             <div class="job-search">
                 <form class="search-container" method="get" action="search_result.php" role="search" aria-label="Search open positions">
-                    <img src="search_icon.png" alt="" aria-hidden="true">
+                    <img src="images/search_icon.png" alt="" aria-hidden="true">
                     <label class="visually-hidden" for="job_title">Search jobs</label>
                     <input type="search" id="job_title" name="job_title" placeholder="Search jobs"
                         value="<?php echo isset($_GET['job_title']) ? htmlspecialchars($_GET['job_title']) : ''; ?>" required>

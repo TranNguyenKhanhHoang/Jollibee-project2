@@ -40,7 +40,7 @@ include 'nav.inc';
 
         <div class="hero-image">
 
-            <img src="novacartphoto.jpg"
+            <img src="images/novacartphoto.jpg"
                 alt="NovaCart employees working together">
 
         </div>

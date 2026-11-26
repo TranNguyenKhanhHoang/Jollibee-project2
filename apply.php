@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "NovaCart | Apply";
-$pageStylesheet = "applystyle.css"; 
+$pageStylesheet = "styles/applystyle.css"; 
 include "header.inc";
 include 'nav.inc';
 ?>

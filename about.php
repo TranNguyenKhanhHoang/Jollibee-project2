@@ -37,7 +37,7 @@ $pageTitle = 'NovaCart | About Us';
 include 'header.inc';
 include 'nav.inc';
 ?>
-    <link rel="stylesheet" href="aboutstyles.css">
+    <link rel="stylesheet" href="styles/aboutstyles.css">
 
     <main>
         <section>
@@ -94,7 +94,7 @@ include 'nav.inc';
             </p>
             <h3>Group Details</h3>
             <figure>
-                <img src="groupphoto.jpg" alt="Group photo of the four Jollibee team members" width="500">
+                <img src="images/groupphoto.jpg" alt="Group photo of the four Jollibee team members" width="500">
                 <figcaption>The Jollibee Team collaborating on the NovaCart website</figcaption>
             </figure>
             <section class="team-contribution">
