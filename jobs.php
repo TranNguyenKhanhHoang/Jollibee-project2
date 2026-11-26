@@ -167,17 +167,25 @@ include "includes/header.inc";
 
                 <article class="card">
                     <!-- JOB 1 -->
-                    <h3>Front-End Web Developer</h3>
                     <ul>
-                        <li>Reference Number: FE102</li>
-                        <li>Short Description:
-                            We are seeking a talented Front-End Web Developer to build, optimize, and maintain
-                            responsive,
-                            accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 - $1,800 / month</li>
-                        <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
-                        <li>Professional Communication and Presentation </li>
-                        <li>Teamwork Framework</li>
+                        <li><strong>Reference Number:</strong> FE102</li>
+                        <li><strong>Short Description:</strong> We are seeking a talented Front-End Web Developer to
+                            build, optimize, and maintain responsive, accessible customer-facing web interfaces for our
+                            online retail platform.</li>
+                        <li><strong>Salary:</strong> $1,200 - $1,800 / month</li>
+                        <li><strong>Reporting Line:</strong> Reports to the Technical Lead / Engineering Manager</li>
+                        <li><strong>Key Responsibilities:</strong>
+                            <ul>
+                                <li>Develop user-facing features using modern web technologies.</li>
+                                <li>Ensure the technical feasibility of UI/UX designs.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Requirements & Framework:</strong>
+                            <ul>
+                                <li>Professional Communication and Presentation</li>
+                                <li>Teamwork Framework</li>
+                            </ul>
+                        </li>
                     </ul>
                     <a href="apply.php">
                         Apply now →
@@ -188,15 +196,27 @@ include "includes/header.inc";
                 <article class="card">
                     <h3>UX/UI Designer</h3>
                     <ul>
-                        <li>Reference Number: FE102</li>
-                        <li>Short Description:
-                            We are seeking a talented Front-End Web Developer to build, optimize, and maintain
-                            responsive,
-                            accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 - $1,800 / month</li>
-                        <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
-                        <li>Professional Communication and Presentation</li>
-                        <li>Teamwork Framework</li>
+                        <li><strong>Reference Number:</strong> UX102</li>
+                        <li><strong>Short Description:</strong> We are seeking a creative UX/UI Designer to design
+                            intuitive, engaging, and user-centric digital interfaces for our e-commerce platform.</li>
+                        <li><strong>Salary:</strong> $1,200 - $1,800 / month</li>
+                        <li><strong>Reporting Line:</strong> Reports to the Product Manager / Head of Design</li>
+
+                        <li><strong>Key Responsibilities:</strong>
+                            <ul>
+                                <li>Design user flows, wireframes, prototypes, and high-fidelity mockups.</li>
+                                <li>Collaborate with developers to ensure design integrity.</li>
+                            </ul>
+                        </li>
+
+                       
+                        <li><strong>Requirements:</strong>
+                            <ul>
+                                <li>Proficiency in Figma, Adobe XD, or similar design tools.</li>
+                                <li>Strong portfolio demonstrating professional communication and teamwork framework.
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                     <a href="apply.php">
                         Apply now →
@@ -207,15 +227,24 @@ include "includes/header.inc";
                 <article class="card">
                     <h3>Product Listing Specialist</h3>
                     <ul>
-                        <li>Reference Number: FE102</li>
-                        <li>Short Description:
-                            We are seeking a talented Front-End Web Developer to build, optimize, and maintain
-                            responsive,
-                            accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 - $1,800 / month</li>
-                        <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
-                        <li>Professional Communication and Presentation</li>
-                        <li>Teamwork Framework</li>
+                        <li><strong>Reference Number:</strong> PL102</li>
+                        <li><strong>Short Description:</strong> We are seeking a detail-oriented Product Listing
+                            Specialist to manage, optimize, and organize e-commerce product catalogs and metadata
+                            efficiently.</li>
+                        <li><strong>Salary:</strong> $1,000 - $1,500 / month</li>
+                        <li><strong>Reporting Line:</strong> Reports to the E-commerce Manager / Operations Lead</li>
+                        <li><strong>Key Responsibilities:</strong>
+                            <ul>
+                                <li>Upload and manage product inventories, descriptions, and pricing data.</li>
+                                <li>Optimize listings for search visibility and conversion rates.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Requirements & Framework:</strong>
+                            <ul>
+                                <li>Professional Communication and Presentation</li>
+                                <li>Teamwork Framework</li>
+                            </ul>
+                        </li>
                     </ul>
                     <a href="apply.php">
                         Apply now →
