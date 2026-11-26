@@ -6,7 +6,7 @@ error_reporting(E_ALL);
  * The team contributions (Part 1 + Part 2) are loaded from the `about` table.
  * settings.php holds the database details and opens the connection ($conn).
  */
-require_once 'includes/settings.php';
+require_once 'settings.php';
 
 // if something is wrong with the query, show a message instead of a PHP error
 mysqli_report(MYSQLI_REPORT_OFF);
