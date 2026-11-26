@@ -9,7 +9,7 @@
 
     <title><?= $pageTitle ?></title>
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <?php if (!empty($pageStylesheet)): ?>
     <link rel="stylesheet" href="<?= htmlspecialchars($pageStylesheet, ENT_QUOTES, 'UTF-8') ?>">
     <?php endif; ?>

@@ -34,10 +34,10 @@ function show_list($text)
 }
 
 $pageTitle = 'NovaCart | About Us';
-include 'includes/header.inc';
-include 'includes/nav.inc';
+include 'header.inc';
+include 'nav.inc';
 ?>
-    <link rel="stylesheet" href="styles/aboutstyles.css">
+    <link rel="stylesheet" href="aboutstyles.css">
 
     <main>
         <section>
@@ -94,7 +94,7 @@ include 'includes/nav.inc';
             </p>
             <h3>Group Details</h3>
             <figure>
-                <img src="images/groupphoto.jpg" alt="Group photo of the four Jollibee team members" width="500">
+                <img src="groupphoto.jpg" alt="Group photo of the four Jollibee team members" width="500">
                 <figcaption>The Jollibee Team collaborating on the NovaCart website</figcaption>
             </figure>
             <section class="team-contribution">
@@ -168,4 +168,4 @@ include 'includes/nav.inc';
         <p><a href="jobs.php">Explore Job Opportunities</a></p>
         <p><a href="apply.php">Apply Now</a></p>
     </main>
-<?php include 'includes/footer.inc'; ?>
+<?php include 'footer.inc'; ?>

@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "NovaCart | Home";
-include "includes/header.inc" ;
-include 'includes/nav.inc';
+include "header.inc" ;
+include 'nav.inc';
 
 ?>
 
@@ -40,7 +40,7 @@ include 'includes/nav.inc';
 
         <div class="hero-image">
 
-            <img src="images/novacartphoto.jpg"
+            <img src="novacartphoto.jpg"
                 alt="NovaCart employees working together">
 
         </div>
@@ -208,4 +208,4 @@ include 'includes/nav.inc';
 
 </main>
 
-<?php include "includes/footer.inc"; ?>
+<?php include "footer.inc"; ?>

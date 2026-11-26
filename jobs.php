@@ -2,8 +2,8 @@
 
 <?php
 $pageTitle = "NovaCart | jobs";
-$pageStylesheet = "styles/jobstyles.css"; 
-include "includes/header.inc";
+$pageStylesheet = "jobstyles.css"; 
+include "header.inc";
 
 ?>
 
@@ -47,7 +47,7 @@ include "includes/header.inc";
 </head>
 
 <body>
-    <?php include 'includes/nav.inc'; ?>
+    <?php include 'nav.inc'; ?>
 
     <!-- ================= PAGE HERO BANNER ================= -->
     <section class="page-banner">
@@ -57,7 +57,7 @@ include "includes/header.inc";
 
             <div class="job-search">
                 <form class="search-container" method="get" action="search_result.php" role="search" aria-label="Search open positions">
-                    <img src="images/search_icon.png" alt="" aria-hidden="true">
+                    <img src="search_icon.png" alt="" aria-hidden="true">
                     <label class="visually-hidden" for="job_title">Search jobs</label>
                     <input type="search" id="job_title" name="job_title" placeholder="Search jobs"
                         value="<?php echo isset($_GET['job_title']) ? htmlspecialchars($_GET['job_title']) : ''; ?>" required>
@@ -125,7 +125,7 @@ include "includes/header.inc";
 
             <div class="card-job">
                 <?php
-                    require_once "includes/settings.php";
+                    require_once "settings.php";
                     mysqli_report(MYSQLI_REPORT_OFF);
                     $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
@@ -271,4 +271,4 @@ include "includes/header.inc";
 </body>
 
 </html>
-<?php include 'includes/footer.inc';?>
+<?php include 'footer.inc';?>

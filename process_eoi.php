@@ -56,7 +56,7 @@ if (strlen($otherskills) > 5000) $errors[] = "Other skills must be at most 5000 
 
 $eoiNumber = null;
 if (!$errors) {
-    require_once __DIR__ . "/includes/settings.php";
+    require_once __DIR__ . "/settings.php";
 
     $sql = "INSERT INTO eoi
         (jobref, position, firstname, lastname, dob, gender, street, suburb,
@@ -333,6 +333,6 @@ if (!$errors) {
     </div>
 <?php endif; ?>
 </main>
-<?php include 'includes/footer.inc'; ?>
+<?php include 'footer.inc'; ?>
 </body>
 </html>
