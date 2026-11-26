@@ -159,7 +159,6 @@ include 'includes/nav.inc';
       </div>
     </form>
   </main>
-</body>
-
-</html>
 <?php include 'includes/footer.inc';?>
+</body>
+</html>

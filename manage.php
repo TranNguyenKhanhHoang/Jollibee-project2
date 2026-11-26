@@ -221,9 +221,10 @@ if ($stmt) {
 <?php
 if ($result) mysqli_free_result($result);
 if ($stmt) mysqli_stmt_close($stmt);
-include("includes/footer.inc");
 ?>
 <p><a href="logout.php">Logout</a></p>
 <?php
 include("includes/footer.inc");
 ?>
+
+

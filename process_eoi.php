@@ -333,6 +333,6 @@ if (!$errors) {
     </div>
 <?php endif; ?>
 </main>
+<?php include 'includes/footer.inc'; ?>
 </body>
 </html>
-<?php include 'includes/footer.inc'; ?>
